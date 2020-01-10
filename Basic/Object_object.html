@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Object.keys()
+    var arr = ["a","b","c"];
+    document.write(Object.keys(arr)+"<br />"); //Object.keys() : 객체의 키 값만을 모아서 배열로 만들어 주는 메소드
+
+    var i = {"name": "jiwon", "age": 25,"city":"seoul"}
+    document.write(Object.keys(i)+"<br />");
+
+    //Object.prototype.toString()
+    var o = new Object();
+    document.write(o.toString()+"<br />");
+
+    var a = new Array(1,2,3);
+    document.write(a.toString()); //toString() : 배열이나 객체가 가지고 있는 값을 출력해주는 메소드
+  </script>
+</body>
+</html>

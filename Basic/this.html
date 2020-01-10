@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    function func(){
+      if(window === this){
+        document.write('window === this');
+      }
+    }
+    func();
+    */
+
+    /*
+    var o = {
+      func : function(){
+        if(o === this){
+          document.write('o === this');
+        }
+      }
+    }
+    o.func();
+    */
+
+    /*
+    var funcThis = null;
+    function Func(){
+      funcThis = this; //funcThis 앞에 var을 안썼기 때문에 위에 있는 전역변수를 가리킴, 함수 안에서 this는 window를 가리킴
+    }
+
+    var o1 = Func(); //Func() 호출
+    if(funcThis === window){
+      document.write('window <br />');
+    }
+
+    var o2 = new Func();
+    if(funcThis === o2){ //생성자 함수에서 this는 새로 생성된 빈 객체를 가리킴
+      document.write('o2 <br />');
+    }
+    */
+
+    var o ={}
+    var p ={}
+    function func(){
+      switch(this){ //switch문에서 ()안에 있는 변수와 case 다음으로 나오는 변수가 같으면 break가 나올 때 까지 실행
+        case o :
+            document.write('o <br />');
+            break;
+        case p :
+            document.write('p <br />');
+            break;
+        case window :
+            document.write('window <br />');
+            break;
+      }
+    }
+
+    func();
+    func.apply(o); //apply를 쓰면 func안에 this에 객체 o가 들어감
+    func.apply(p);
+
+  </script>
+</body>
+</html>

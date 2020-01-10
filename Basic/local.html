@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    (function(){
+        var MYAPP = {}; //객체 선언
+        MYAPP.carculator = { //객체의 속성 carculator 선언
+          'left' : null,
+          'right' : null
+        }
+        MYAPP.cordinator = {
+          'left' : null,
+          'right' : null
+        }
+        MYAPP.carculator.left=10;
+        MYAPP.carculator.right=20;
+        function sum(){
+          return MYAPP.carculator.left+MYAPP.carculator.right;
+        }
+        document.write(sum());
+    })(); //익명함수
+  </script>
+</body>
+</html>

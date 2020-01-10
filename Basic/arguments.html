@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function sum(){
+      var _sum=0;
+      for(i=0;i<arguments.length;i++){
+        document.write(i+' : '+arguments[i]+'<br />'); //arguments는 특수한 배열, 사용자가 정의한 인자가 들어가 있음
+        _sum+=arguments[i];
+      }
+      return _sum;
+    }
+    document.write('result :'+sum(1,2,3,4)); //인자의 길이만큼 arguments의 길이가 변함
+  </script>
+</body>
+</html>

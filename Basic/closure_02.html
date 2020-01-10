@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function outter(){
+      var title = 'coding everybody!';
+      return function(){ //return을 하는 순간 외부함수는 종료
+        alert(title); //title은 외부함수 안에 정의되어 있지만 내부함수를 통해서 불러올 수 있다.
+      }
+    }
+    var inner = outter();
+    inner();
+  </script>
+</body>
+</html>

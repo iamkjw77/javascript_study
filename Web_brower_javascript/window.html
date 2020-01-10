@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    input{padding:10px;}
+  </style>
+</head>
+<body>
+  <input type="button" value="window.open('./hello.html');" onclick="open1()" />
+  <input type="button" value="window.open('./hello.html','_self');" onclick="open2()" />
+  <input type="button" value="window.open('./hello.html','_blank');" onclick="open3()" />
+  <input type="button" value="window.open('./hello.html','hello');" onclick="open4()" />
+  <input type="button" value="window.open('./hello.html','_blank','width=200,height=200,resizable=yes');" onclick="open5()" />
+  <script>
+    function open1(){
+      window.open('./hello.html');
+    }
+    function open2(){
+      window.open('./hello.html','_self');
+    }
+    function open3(){
+      window.open('./hello.html','_blank');
+    }
+    function open4(){
+      window.open('./hello.html','hello');
+    }
+    function open5(){
+      window.open('./hello.html','_blank','width=200,height=200,resizable=yes');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function get_members(){
+      return ['a','b','c'];
+    }
+
+    var member = get_members();
+
+    /*
+    for(i=0;i<member.length;i++){
+      document.write(member[i].toUpperCase()+"<br />");
+    }
+    */
+
+    //member.push('d');
+    //member=member.concat(['d','e']);
+    //member.unshift('z');
+    //member.splice(1,1,'x','y');
+    //member.shift();
+    //member.pop();
+    /*
+    for(i=0;i<member.length;i++){
+      document.write(member[i]);
+    }
+    */
+    for(var key in member){
+      document.write(key+" "+member[key]+"<br />");
+    }
+  </script>
+
+</body>
+</html>

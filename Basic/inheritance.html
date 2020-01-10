@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Person(name){
+      this.name = name;
+    }
+
+    Person.prototype.name = null; //이런 식으로도 쓸 수 있음
+    Person.prototype.introduce = function(){
+      return 'My name is '+ this.name;
+    }
+
+    function Programmer(name){
+      this.name = name;
+    }
+
+    Programmer.prototype = new Person(); //Person을 상속(상속하는 법)
+    Programmer.prototype.coding = function(){
+      return 'Hello world!';
+    }
+    var p1 = new Programmer('ji won');
+    document.write(p1.introduce()+'<br />');
+    document.write(p1.coding()+'<br />');
+
+    function Designer(name){
+      this.name = name;
+    }
+
+    Designer.prototype = new Person(); // 상속
+    Designer.prototype.design = function(){
+      return 'Beautiful!';
+    }
+
+    var p2 = new Designer('ji yeon');
+    document.write(p2.introduce()+'<br />');
+    document.write(p2.design());
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    /*
+    function numbering(){
+      for(i=0;i<5;i++){
+        document.write(i+"<br />");
+      }
+    }
+    for(j=0;j<2;j++){
+      numbering();
+    }
+    */
+
+    function get_member1(){
+      return 'hello!';
+      return 'everybody';
+      return 'hi';
+    }
+    //alert(get_member1()); //hello만 출력
+
+    /*
+    function get_argument(arg1,arg2){
+      return arg1+arg2;
+    }
+    alert(get_argument(10,20));
+    alert(get_argument(20,30));
+    */
+
+    number = function(){
+      for(i=0;i<10;i++){
+        document.write(i+"<br />");
+      }
+    }
+    number();
+
+    (function(){
+      document.write('hello!');
+    })();
+    // 익명함수
+  </script>
+</body>
+</html>

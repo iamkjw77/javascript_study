@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li id="active">JAVASCRIPT</li>
+  </ul>
+  <script>
+    console.group('before'); //before라는 그룹의 시작
+    var lis = document.getElementsByTagName('li');
+    for(var i=0;i<lis.length;i++){
+      console.log(lis[i]);
+    }
+    console.groupEnd(); //그룹 끝
+
+    console.group('after'); //after라는 그룹의 시작
+    lis[1].parentNode.removeChild(lis[1]);
+    for(var i=0;i<lis.length;i++){
+      console.log(lis[i]);
+    }
+    console.groupEnd(); //그룹의 끝
+  </script>
+</body>
+</html>

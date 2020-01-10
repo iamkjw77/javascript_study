@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Person(name){
+      this.name = name;
+      this.introduce = function(){
+        return 'My name is '+ this.name;
+      }
+    } //생성자 함수는 객체에 대한 초기화를 해야함
+
+    var p1 = new Person('ji won'); // var p1 = {}
+    document.write(p1.introduce());
+
+  </script>
+</body>
+</html>

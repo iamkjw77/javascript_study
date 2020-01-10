@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JAVASCRIPT</li>
+  </ul>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    var li = $('li'); //유사배열
+    console.log(li[0]); // <li>HTML</li>출력
+    console.log(li[1]); // <li>CSS</li>출력
+    console.log(li[2]); // <li>JAVASCRIPT</li>출력
+    console.log(li.length);
+    for(var i=0;i<li.length;i++){
+      console.log(li[i].constructor) //HTMLLIElement 출력, 즉 li는 jquery객체가 아닌, DOM객체임(따라서 li[i].css('color','red')하면 오류)
+    }
+
+    for(var i=0;i<li.length;i++){
+      $(li[i]).css('color','red'); //객체는 $()안에 ''없음
+    }
+  </script>
+</body>
+</html>

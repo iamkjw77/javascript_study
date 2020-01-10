@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    Object.prototype.contain = function(needle){
+      for(var name in this){
+        if(this[name] === needle){
+          return true;
+        }
+      }
+      return false;
+    }
+
+    var o = {"name":"ji won","age":25,"city":"seoul"}
+    var a = [1,2,3,4,5];
+    document.write(o.contain("ji yeon")+"<br />");
+    document.write(a.contain(1)+"<br />");
+
+    for(var name in a){
+      if(a.hasOwnProperty(name)){ // hasOwnProperty()는 상속받은 값을 제외한 자신만의 값을 출력
+        document.write(a[name]+"<br />");
+      }
+
+    }
+  </script>
+</body>
+</html>
