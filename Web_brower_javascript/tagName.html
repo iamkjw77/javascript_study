@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li id="active">JAVASCRIPT</li>
+  </ul>
+  <script>
+    console.log(document.getElementById('active').tagName); //LI 출력
+    /* document.getElementById('.active').tagName = 'a'; //적용안됨, tagName은 읽기 전용이기 때문 */
+    var active = document.getElementById('active');
+    console.log(active.id); //active 출력
+    active.id = 'deactive';
+    console.log(active.id); //deactive 출력
+
+  </script>
+</body>
+</html>

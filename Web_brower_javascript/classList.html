@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li id="active" class="marked current">JAVASCRIPT</li>
+  </ul>
+  <script>
+    var active = document.getElementById('active');
+    console.log(active.classList); //DOMTokenList 출력
+    console.log(active.classList.length) //2 출력
+    for(var i=0;i<active.classList.length;i++){
+      console.log(active.classList[i]);
+    }
+    active.classList.add('important');
+    console.log(active.classList); //marked current important 출력
+    active.classList.remove('important');
+    console.log(active.classList); //marked current 출력
+    active.classList.toggle('important')//실행 할 때마다 important가 있다가 없다가를 반복
+    console.log(active.classList); //console창에서 실행시 true,false를 반복
+  </script>
+</body>
+</html>
