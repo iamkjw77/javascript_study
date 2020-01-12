@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <a id="target" href="http://www.daum.net">naver</a>
+  <script>
+    var t = document.getElementById('target');
+    console.log(t.getAttribute('href'));
+    console.log(t.getAttribute('id'));
+    t.setAttribute('title','naver');
+    t.setAttribute('href','http://www.naver.com');
+    t.removeAttribute('title');
+    console.log(t.hasAttribute('href')); //true면 속성이 존재, false면 존재X
+  </script>
+</body>
+</html>

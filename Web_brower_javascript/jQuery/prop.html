@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <a id="a" href="attr.html">html</a>
+  <input id="i" type="checkbox" checked="checked" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    console.log($('#a').attr('href')); //attr.html 있는 그대로를 출력, attribute방식
+    console.log($('#a').prop('href')); //주소를 출력, property 방식
+    console.log($('#i').attr('checked')); //checked 출력
+    console.log($('#i').prop('checked')); //true 출력
+
+    $('#a').prop('class','b'); //1
+    $('#a').prop('className','h'); //2 위 1번 방법과 2번 방법 둘 다 클래스 이름을 바꾸는것, jQuery가 알아서 보정해서 바꿔줌(장점)
+    console.log($('#a').prop('class')); //h출력
+  </script>
+</body>
+</html>

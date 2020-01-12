@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <a id="target" href="http://www.naver.com">daum</a>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    var t = $('#target');
+    console.log(t.attr('href'));
+    t.attr('href','http://www.daum.net'); //attr('1','2'); attr에 1인자만 쓰면 getAttribute, 뒤에 값까지 쓰면 setAttribute와 동일한 효과
+    t.attr('title','naver');
+    t.removeAttr('title'); //속성 삭제 
+  </script>
+</body>
+</html>

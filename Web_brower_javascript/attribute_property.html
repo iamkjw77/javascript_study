@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p id="target">Hello world!</p>
+  <a id="a" href="attribute.html">html</a>
+  <script>
+    var target = document.getElementById('target');
+    target.setAttribute('class','active'); //attribute 방식
+    target.className='active'; //property 방식
+
+    var a = document.getElementById('a');
+    console.log('a.href',a.href); //http://www.naver.com 출력
+    console.log('a.getAttribute("href")',a.getAttribute('href')); //attribute.html(있는그대로 출력)출력
+  </script>
+</body>
+</html>

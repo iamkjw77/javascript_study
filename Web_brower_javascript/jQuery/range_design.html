@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li class="marked">HTML</li>
+    <li>CSS</li>
+    <li id="active">JAVASCRIPT
+      <ul>
+        <li>JavaScript Core</li>
+        <li class="marked">DOM</li>
+        <li class="marked">BOM</li>
+      </ul>
+    </li>
+  </ul>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    //$('.marked','#active').css("background-color","gray"); //class가 marked인것 중에 id가 active인 것, 순서주의
+    //$('#active .marked').css("background-color","gray"); //id가 active인것 중에 class가 marked인 것, 따옴표 주의
+    //$('#active').find('.marked').css("color","white"); //id가 active인것 중에 class가 marked인 것을 찾아 ~
+    $('#active').css('background-color','orange').find('.marked').css('color','white');
+  </script>
+</body>
+</html>
