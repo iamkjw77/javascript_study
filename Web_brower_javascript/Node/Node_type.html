@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body id="start">
+  <script>
+    for(var name in Node){
+      console.log(name,Node[name]); //Node의 종류가 순서대로 나옴
+    }
+    var body = document.getElementById("start");
+    console.log(body.nodeType); //1출력, NodeType에서 1은 Element_Node의미
+    console.log(body.firstChild.nodeType); //3출력, text_Node 의미
+    console.log(document.nodeType); //9출력, Document_Node 의미
+    console.log(document.nodeType===9); //true 출력
+    console.log(body.nodeName); //BODY 출력
+    console.log(body.firstChild.nodeName); //#text 출력
+    console.log(body.firstChild.nextSibling.nodeName) //UL출력
+  </script>
+</body>
+</html>

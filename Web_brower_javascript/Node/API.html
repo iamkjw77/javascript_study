@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body id="start">
+    <ul>
+      <li><a href="#">html</a></li>
+      <li><a href="#">css</a></li>
+      <li><a href="#">javascript</a>
+          <ul>
+              <li><a href="#">javascript core</a></li>
+              <li><a href="#"></a>DOM</li>
+              <li><a href="#"></a>BOM</li>
+          </ul>
+      </li>
+    </ul>
+    <script>
+        var s = document.getElementById('start');
+        console.log(s.firstChild); //#text 출력, start의 firstChild는 ul이지만 그 사이 공백때문에 #text가 출력
+        var ul = s.firstChild.nextSibling
+        console.log(ul); //ul출력, #text의 바로 다음으로 오는 형제
+        console.log(ul.nextSibling);//#text 출력, ul과 script사이의 존재하는 공백
+        console.log(ul.nextSibling.nextSibling); //script 출력
+        console.log(ul.childNodes); //유사배열 [text,li,text,li,text,li,text]
+        console.log(ul.childNodes[1]); //li(html)출력
+        console.log(ul.parentNode); //body 출력
+    </script>
+</body>
+</html>

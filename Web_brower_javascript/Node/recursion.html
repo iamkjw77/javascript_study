@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body id="start">
+  <ul>
+      <li><a href="#">html</a></li>
+      <li><a href="#">css</a></li>
+      <li><a href="#">JavaScript</a>
+          <ul>
+              <li><a href="#">JavaScript Core</a></li>
+              <li><a href="#">DOM</a></li>
+              <li><a href="#">BOM</a></li>
+          </ul>
+      </li>
+  </ul>
+  <script>
+    function traverse(target, callback){ //인자를 함수로 받을경우를 callback이라고 함
+        if(target.nodeType === 1){ //노드 타입이 element인것만 출력하고 싶을경우(text출력 x)
+            //if(target.nodeName === 'A') //a태그만 출력하고 싶을 경우
+            callback(target);
+            var c = target.childNodes; ///body의 자식도 나오게 하려면, 자식을 변수에 저장
+            for(var i=0; i<c.length; i++){
+                traverse(c[i], callback);
+            }
+        }
+    }
+
+    traverse(document.getElementById('start'), function(elem){
+        console.log(elem);
+    });
+
+  </script>
+</body>
+</html>
