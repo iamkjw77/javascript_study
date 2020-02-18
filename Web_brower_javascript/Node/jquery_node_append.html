@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="target1">
+    target1
+  </div>
+  <div id="source">
+    source
+  </div>
+  <input type="button" value="append" id="btn1" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $('#btn1').click(function(){
+      $('#target1').append($('#source')); //target1안으로 source가 들어감
+    })
+  </script>
+</body>
+</html>

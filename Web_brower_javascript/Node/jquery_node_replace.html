@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="target1">
+    target1
+  </div>
+  <div id="target2">
+    target2
+  </div>
+  <input type="button" value="replaceAll target1" id="btn1" />
+  <input type="button" value="replaceWith target2" id="btn2" />
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $('#btn1').click(function(){
+      $('<div>replaceAll</div>').replaceAll('#target1');
+    })
+    $('#btn2').click(function(){
+      $('#target2').replaceWith('<div>replaceWith</div>')
+    })
+  </script>
+</body>
+</html>
