@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p id="target1"><span>hello world!</span></p>
+  <p id="target2">
+    <span>hello world!</span>
+  </p>
+  <script>
+    var t1 = document.getElementById('target1').firstChild;
+    var t2 = document.getElementById('target2').firstChild;
+
+    console.log(t1.firstChild.nodeValue); //hello world! 출력
+    try{
+        console.log(t2.firstChild.nodeValue); //null
+    } catch(e){
+        console.log(e);
+    }
+    console.log(t2.nextSibling.firstChild.nodeValue); //hello world! 출력
+  </script>
+</body>
+</html>
