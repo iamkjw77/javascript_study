@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  body{margin:0;padding:0}
+  #target{width:100px;height:100px}
+  div{border:50px solid #1065e6;padding:50px;margin:50px}
+</style>
+<body>
+  <div>
+    <div id="target">
+      Coding
+    </div>
+  </div>
+
+  <script>
+    var t = document.getElementById('target');
+    setInterval(function(){
+      console.log('getBoundingClientRect:',t.getBoundingClientRect().top,'pageYOffset',window.pageYOffset);
+    },1000)
+    //setInterval은 안에있는 함수를 1초에 한번씩 반복적으로 실행
+  </script>
+</body>
+</html>
