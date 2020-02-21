@@ -23,7 +23,9 @@
     setInterval(function(){
       console.log('getBoundingClientRect:',t.getBoundingClientRect().top,'pageYOffset',window.pageYOffset);
     },1000)
-    //setInterval은 안에있는 함수를 1초에 한번씩 반복적으로 실행
+    //setInterval은 안에있는 함수를 1초(1000)에 한번씩 반복적으로 실행
+    // getBoundingClientRect().top // viewport top에서 얼마만큼 떨어졌는가
+    // window.pageYOffset // 스크롤로 인해 가려지는 부분의 viewport에서부터의 길이
   </script>
 </body>
 </html>
